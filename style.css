@@ -228,9 +228,10 @@ nav a:hover::after {
   border: 1px solid rgba(255,255,255,0.08);
 }
 
+/* ===== CARD HOVER EFFECT ===== */
 .card:hover {
-  transform: translateY(-10px);
-  background: rgba(255,255,255,0.07);
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 10px 30px rgba(123, 47, 247, 0.3);
 }
 
 /* ===== PORTFOLIO ===== */
@@ -250,10 +251,9 @@ nav a:hover::after {
 }
 
 .portfolio-item {
-  width: 100%;
-  overflow: hidden;
-  border-radius: 15px;
   position: relative;
+  border-radius: 15px;
+  overflow: hidden;
 }
 
 .portfolio-item img {
@@ -266,6 +266,24 @@ nav a:hover::after {
 
 .portfolio-item img:hover {
   transform: scale(1.05);
+}
+
+.portfolio-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 12px 15px;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  transition: 0.3s;
+  opacity: 0;
+}
+
+.portfolio-item:hover .portfolio-caption {
+  opacity: 1;
 }
 
 /* ===== CTA ===== */
@@ -327,18 +345,24 @@ nav a:hover::after {
   border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
-.about-content {
+/* ===== ABOUT FLEX LAYOUT ===== */
+.about-content .about-flex {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  gap: 40px;
-  max-width: 900px;
-  margin: 0 auto;
+  gap: 50px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 15px;
+  object-fit: cover;
 }
 
 .about-text {
+  flex: 1;
   color: #aaa;
   font-size: 18px;
   line-height: 1.7;
@@ -376,4 +400,38 @@ nav a:hover::after {
     gap: 25px;
     padding: 0 15px;
   }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .about-content .about-flex {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-content .about-flex {
+    flex-direction: column;
+  }
+
+  .about-image img {
+    max-width: 100%;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero-sub {
+    font-size: 15px;
+  }
+}
+
+/* ===== BUTTON SCROLL TO CONTACT ===== */
+.btn[href="#contact"] {
+  scroll-behavior: smooth;
 }
