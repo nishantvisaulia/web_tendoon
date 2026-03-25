@@ -35,7 +35,7 @@ background: rgba(255,255,255,0.05);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0; /* increased */
+  padding: 15px 0; /* increased */
 }
 
 /* LOGO PREMIUM ANIMATION */
@@ -46,7 +46,7 @@ background: rgba(255,255,255,0.05);
 }
 
 .logo img {
-  height: 75px;
+  height: 65px;
   width: auto;
   transition: 0.4s ease;
   animation: floatLogo 4s ease-in-out infinite;
@@ -75,7 +75,7 @@ background: rgba(255,255,255,0.05);
 /* NAV */
 nav ul {
 display: flex;
-gap: 30px;
+gap: 40px;
 list-style: none;
 }
 
@@ -86,7 +86,7 @@ position: relative;
 }
 
 nav a {
-  font-size: 15px;
+  font-size: 17px;
   letter-spacing: 1px;
 }
 
@@ -211,14 +211,30 @@ transform: scale(1.05);
   padding: 120px 0;
 }
 
-/* CTA */
+/* CTA (FIXED - NO OVERLAP) */
 .cta {
-  padding: 120px 20px 140px; /* bottom extra space */
-  text-align: center;
+padding: 140px 20px 140px;
+text-align: center;
+display: flex;
+flex-direction: column;
+align-items: center;
 }
 
+/* Heading spacing fix */
+.cta h2 {
+margin-bottom: 30px;
+line-height: 1.3;
+}
+
+/* Button spacing fix */
 .cta .btn {
-  margin-top: 25px; /* button neeche push */
+margin-top: 10px;
+}
+
+/* EXTRA SAFETY (no overlap on small screens) */
+.cta * {
+position: relative;
+z-index: 1;
 }
 
 /* WHATSAPP */
