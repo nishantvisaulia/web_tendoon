@@ -135,10 +135,31 @@ width: 100%;
 text-align: center;
 }
 
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content {
+  animation: fadeUp 1.2s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .hero h1 {
-font-size: 58px;
-line-height: 1.1;
-letter-spacing: -1px;
+  font-size: 64px;
+  font-weight: 700;
+  letter-spacing: -1.5px;
+  line-height: 1.1;
 }
 
 .gradient-text {
@@ -148,10 +169,48 @@ background: linear-gradient(90deg, #fff, #888);
 }
 
 .hero-sub {
-max-width: 600px;
-margin: 20px auto;
-font-size: 17px;
-color: #aaa;
+  font-size: 18px;
+  color: #aaa;
+  max-width: 600px;
+  margin: 20px auto 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+/* HERO BACKGROUND GLOW */
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+/* BIG GLOW */
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(123,47,247,0.25), transparent);
+  top: -100px;
+  left: -100px;
+  filter: blur(100px);
+  z-index: 0;
+}
+
+/* SECOND GLOW */
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(155,77,255,0.2), transparent);
+  bottom: -100px;
+  right: -100px;
+  filter: blur(120px);
+  z-index: 0;
 }
 
 /* GRID */
@@ -299,17 +358,21 @@ section {
   }
 }
 
-/* HERO LOGO CENTER FIX */
-.hero-logo {
-  display: block;
-  margin: 0 auto 20px auto; /* center */
-  height: 60px;
-  opacity: 0.08;
+/* ===== FORCE CENTER FIX ===== */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center !important;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
 }
 
-.hero-content {
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
+.hero-logo {
+  display: block;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-bottom: 20px;
+  height: 60px;
+  opacity: 0.08;
 }
