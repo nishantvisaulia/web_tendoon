@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -7,198 +6,133 @@
   <title>Tendoon</title>
 
   <!-- CSS LINK -->
-
   <link rel="stylesheet" href="style.css">
 
   <!-- FONT -->
-
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- SMOOTH SCROLL -->
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    nav ul li a.active {
+      color: #ff4f5a; /* Active link color */
+    }
+  </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header class="header glass">
   <div class="container nav">
     <div class="logo">
-  <img src="logo1.png" alt="Tendoon Logo">
-</div>
+      <img src="logo1.png" alt="Tendoon Logo">
+    </div>
 
-<nav>
-  <ul>
-    <li><a href="#hero">Home</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#work">Work</a></li>
-    <li><a href="#about">About</a></li>
-  </ul>
-</nav>
+    <nav>
+      <ul>
+        <li><a href="#hero" class="nav-link">Home</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#portfolio" class="nav-link">Work</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+      </ul>
+    </nav>
 
-<a href="#" class="btn">Book Call</a>
-<img src="logo.png" class="hero-logo" alt="logo">
-
-<h1 class="gradient-text">
-  We Don’t Just Market.<br>
-  We Scale Brands.
-</h1>
-
-<p class="hero-sub">
-  Digital marketing, AI automation & high-converting websites
-  designed to grow your business faster.
-</p>
-
-<div class="hero-buttons">
-  <a href="#" class="btn">Start Project</a>
-  <a href="#services" class="btn-outline">View Services</a>
-</div>
-<div class="grid">
-  <div class="card reveal">
-    <h3>Digital Marketing</h3>
-    <p>Performance marketing, ads & growth strategies.</p>
-  </div>
-
-  <div class="card reveal">
-    <h3>AI Automation</h3>
-    <p>Smart workflows to automate your business.</p>
-  </div>
-
-  <div class="card reveal">
-    <h3>Web Development</h3>
-    <p>High-converting modern websites.</p>
-  </div>
-
-  <div class="card reveal">
-    <h3>Brand Strategy</h3>
-    <p>Position your brand for authority & growth.</p>
-  </div>
-</div>
-<div class="grid portfolio-grid">
-  <div class="portfolio-item">
-    <img src="https://picsum.photos/500/350?1">
-  </div>
-
-  <div class="portfolio-item">
-    <img src="https://picsum.photos/500/350?2">
-  </div>
-
-  <div class="portfolio-item">
-    <img src="https://picsum.photos/500/350?3">
-  </div>
-</div>
-<div class="about-text">
-  <h2>About Tendoon</h2>
-
-  <p>
-    We are a digital growth agency helping brands scale with marketing,
-    AI automation and high-converting websites.
-  </p>
-
-  <p>
-    Our mission is simple — turn ideas into powerful digital systems
-    that generate real revenue.
-  </p>
-  
+    <a href="#" class="btn">Book Call</a>
   </div>
 </header>
 
 <!-- HERO -->
-
-<section class="hero">
+<section id="hero" class="hero">
   <div class="container hero-content reveal">
+    <img src="logo.png" class="hero-logo" alt="logo">
 
-    <img src="logo.png" class="hero-logo"> <!-- LOGO ADDED -->
-    
     <h1 class="gradient-text">
-  We Don’t Just Market.<br>
-  We Scale Brands.
-</h1>
+      We Don’t Just Market.<br>
+      We Scale Brands.
+    </h1>
     <p class="hero-sub">
-  Digital marketing, AI automation & high-converting websites
-  designed to grow your business faster.
-</p>
+      Digital marketing, AI automation & high-converting websites
+      designed to grow your business faster.
+    </p>
 
-
-<div class="hero-buttons">
-  <a href="#" class="btn">Start Project</a>
-  <a href="#" class="btn-outline">View Services</a>
-</div>
-
-
+    <div class="hero-buttons">
+      <a href="#" class="btn">Start Project</a>
+      <a href="#services" class="btn-outline">View Services</a>
+    </div>
   </div>
 </section>
 
 <!-- SERVICES -->
-
-<section class="services">
+<section id="services" class="services">
   <div class="container">
     <h2 class="reveal">Our Expertise</h2>
 
+    <div class="grid">
+      <div class="card reveal">
+        <h3>Digital Marketing</h3>
+        <p>Performance marketing, ads & growth strategies.</p>
+      </div>
 
-<div class="grid">
-  <div class="card reveal">
-    <h3>Digital Marketing</h3>
-    <p>Performance marketing, ads & growth strategies.</p>
-  </div>
+      <div class="card reveal">
+        <h3>AI Automation</h3>
+        <p>Smart workflows to automate your business.</p>
+      </div>
 
-  <div class="card reveal">
-    <h3>AI Automation</h3>
-    <p>Smart workflows to automate your business.</p>
-  </div>
+      <div class="card reveal">
+        <h3>Web Development</h3>
+        <p>High-converting modern websites.</p>
+      </div>
 
-  <div class="card reveal">
-    <h3>Web Development</h3>
-    <p>High-converting modern websites.</p>
-  </div>
-
-  <div class="card reveal">
-    <h3>Brand Strategy</h3>
-    <p>Position your brand for authority & growth.</p>
-  </div>
-</div>
-
-
+      <div class="card reveal">
+        <h3>Brand Strategy</h3>
+        <p>Position your brand for authority & growth.</p>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- PORTFOLIO -->
-
-<section class="portfolio">
+<section id="portfolio" class="portfolio">
   <div class="container">
     <h2 class="reveal">Our Work</h2>
 
-
-<div class="grid">
-  <img src="https://picsum.photos/500/350?1" class="reveal">
-  <img src="https://picsum.photos/500/350?2" class="reveal">
-  <img src="https://picsum.photos/500/350?3" class="reveal">
-</div>
-
-
+    <div class="grid">
+      <img src="https://picsum.photos/500/350?1" class="reveal" alt="portfolio">
+      <img src="https://picsum.photos/500/350?2" class="reveal" alt="portfolio">
+      <img src="https://picsum.photos/500/350?3" class="reveal" alt="portfolio">
+    </div>
   </div>
 </section>
 
-  <div class="about-text"> 
-    <h2>About Tendoon</h2> 
-    <p> We are a digital growth agency helping brands scale with marketing, AI automation and high-converting websites. </p> 
-    <p> Our mission is simple — turn ideas into powerful digital systems that generate real revenue. </p> 
+<!-- ABOUT -->
+<section id="about" class="about-text reveal">
+  <div class="container">
+    <h2>About Tendoon</h2>
+    <p>We are a digital growth agency helping brands scale with marketing, AI automation and high-converting websites.</p>
+    <p>Our mission is simple — turn ideas into powerful digital systems that generate real revenue.</p>
   </div>
+</section>
 
 <!-- CTA -->
-
 <section class="cta reveal">
-  <h2>Ready to Scale Your Business?</h2>
-  
-  <a href="#" class="btn">Book Free Consultation</a>
+  <div class="container">
+    <h2>Ready to Scale Your Business?</h2>
+    <a href="#" class="btn">Book Free Consultation</a>
+  </div>
 </section>
 
 <!-- WHATSAPP -->
-
 <a href="https://wa.me/91XXXXXXXXXX" class="whatsapp">💬</a>
 
+<!-- FOOTER -->
 <footer class="footer">
   <p>© 2026 Tendoon. All rights reserved.</p>
 </footer>
 
 <!-- SCROLL ANIMATION -->
-
 <script>
   const reveals = document.querySelectorAll('.reveal');
 
@@ -206,9 +140,29 @@
     reveals.forEach(el => {
       const windowHeight = window.innerHeight;
       const elementTop = el.getBoundingClientRect().top;
-
       if (elementTop < windowHeight - 100) {
         el.classList.add('active');
+      }
+    });
+  });
+
+  // Active navbar on scroll
+  const sections = document.querySelectorAll('section');
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 100;
+      if (pageYOffset >= sectionTop) {
+        current = section.getAttribute('id');
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === '#' + current) {
+        link.classList.add('active');
       }
     });
   });
