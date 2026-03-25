@@ -10,6 +10,7 @@ body {
   font-family: 'Poppins', sans-serif;
   background: #0a0a0a;
   color: #fff;
+  line-height: 1.6;
 }
 
 /* ===== CONTAINER ===== */
@@ -122,12 +123,12 @@ nav a:hover::after {
 
 /* ===== HERO SECTION ===== */
 .hero {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding-top: 80px; /* for header */
+  padding-top: 80px;
   position: relative;
   overflow: hidden;
 }
@@ -136,7 +137,6 @@ nav a:hover::after {
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
-  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -245,21 +245,22 @@ nav a:hover::after {
 
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 25px;
 }
 
 .portfolio-item {
   width: 100%;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 15px;
+  position: relative;
 }
 
 .portfolio-item img {
   width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 10px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
   transition: 0.4s;
 }
 
@@ -291,18 +292,19 @@ nav a:hover::after {
   border-radius: 50%;
   color: #fff;
   text-decoration: none;
-  transition: 0.3s;
-}
-
-.whatsapp:hover {
-  transform: scale(1.1);
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
 }
 
 /* ===== FOOTER ===== */
 .footer {
   text-align: center;
-  padding: 20px;
-  border-top: 1px solid rgba(255,255,255,0.05);
+  padding: 40px 20px;
+  color: #888;
+  border-top: 1px solid rgba(255,255,255,0.1);
 }
 
 /* ===== SCROLL ANIMATION ===== */
@@ -319,7 +321,7 @@ nav a:hover::after {
 
 /* ===== ABOUT SECTION ===== */
 .about {
-  padding: 100px 0;
+  padding: 120px 20px;
   background: rgba(255,255,255,0.02);
   border-top: 1px solid rgba(255,255,255,0.05);
   border-bottom: 1px solid rgba(255,255,255,0.05);
@@ -331,31 +333,47 @@ nav a:hover::after {
   align-items: center;
   justify-content: center;
   text-align: center;
+  gap: 40px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
 .about-text {
-  max-width: 700px;
   color: #aaa;
-  margin: 0 auto;
+  font-size: 18px;
+  line-height: 1.7;
 }
 
 /* ===== MOBILE RESPONSIVE ===== */
-@media (max-width: 768px) {
-  .portfolio-grid {
-    grid-template-columns: 1fr;
+@media (max-width: 1024px) {
+  .hero h1 {
+    font-size: 48px;
   }
+  .hero-sub {
+    font-size: 16px;
+  }
+}
 
+@media (max-width: 768px) {
   nav ul {
     flex-direction: column;
     gap: 15px;
   }
 
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
   .hero h1 {
-    font-size: 48px;
+    font-size: 36px;
   }
 
   .hero-sub {
-    font-size: 16px;
+    font-size: 15px;
+  }
+
+  .about-content {
+    gap: 25px;
+    padding: 0 15px;
   }
 }
