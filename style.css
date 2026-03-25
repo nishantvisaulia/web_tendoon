@@ -376,3 +376,33 @@ section {
   height: 60px;
   opacity: 0.08;
 }
+
+/* ABOUT SECTION */
+.about {
+  padding: 100px 0;
+}
+
+.about-content {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.about-text {
+  max-width: 700px;
+}
+
+.about-text h2 {
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  color: #aaa;
+  margin-bottom: 15px;
+}
+
+.about {
+  background: rgba(255,255,255,0.02);
+  border-top: 1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
