@@ -311,7 +311,7 @@ nav a:hover::after {
   transform: translateY(0);
 }
 
-/* ===== ABOUT SECTION ===== */
+/* ===== ABOUT SECTION FIX ===== */
 .about {
   padding: 100px 0;
   background: rgba(255,255,255,0.02);
@@ -321,21 +321,17 @@ nav a:hover::after {
 
 .about-content {
   display: flex;
-  justify-content: center;
-  text-align: center;
+  flex-direction: column; /* stack vertically */
+  align-items: center;    /* center horizontally */
+  justify-content: center; /* center vertically if needed */
+  text-align: center;      /* text centered */
+  margin: 0 auto;          /* ensure container is centered */
 }
 
 .about-text {
   max-width: 700px;
-}
-
-.about-text h2 {
-  margin-bottom: 20px;
-}
-
-.about-text p {
   color: #aaa;
-  margin-bottom: 15px;
+  margin: 0 auto; /* center content */
 }
 
 /* ===== MOBILE RESPONSIVE ===== */
