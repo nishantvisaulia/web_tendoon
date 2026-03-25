@@ -44,6 +44,16 @@ font-weight: 700;
 letter-spacing: 2px;
 }
 
+.logo img {  
+  height: 45px;  
+  filter: brightness(1.2);  
+  transition: 0.3s;  
+}  
+
+.logo img:hover {  
+  transform: scale(1.05);  
+}
+
 /* NAV */
 nav ul {
 display: flex;
