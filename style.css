@@ -32,10 +32,10 @@ background: rgba(255,255,255,0.05);
 }
 
 .nav {
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 0; /* increased */
 }
 
 /* LOGO PREMIUM ANIMATION */
@@ -46,7 +46,7 @@ padding: 20px 0;
 }
 
 .logo img {
-  height: 45px;
+  height: 55px;
   width: auto;
   transition: 0.4s ease;
   animation: floatLogo 4s ease-in-out infinite;
@@ -83,6 +83,11 @@ nav a {
 color: #fff;
 text-decoration: none;
 position: relative;
+}
+
+nav a {
+  font-size: 15px;
+  letter-spacing: 1px;
 }
 
 nav a::after {
