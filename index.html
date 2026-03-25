@@ -10,16 +10,6 @@
 
   <!-- FONT -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-  <!-- SMOOTH SCROLL -->
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-    nav ul li a.active {
-      color: #ff4f5a; /* Active link color */
-    }
-  </style>
 </head>
 
 <body>
@@ -99,17 +89,23 @@
   <div class="container">
     <h2 class="reveal">Our Work</h2>
 
-    <div class="grid">
-      <img src="https://picsum.photos/500/350?1" class="reveal" alt="portfolio">
-      <img src="https://picsum.photos/500/350?2" class="reveal" alt="portfolio">
-      <img src="https://picsum.photos/500/350?3" class="reveal" alt="portfolio">
+    <div class="portfolio-grid">
+      <div class="portfolio-item reveal">
+        <img src="https://picsum.photos/500/350?1" alt="portfolio 1">
+      </div>
+      <div class="portfolio-item reveal">
+        <img src="https://picsum.photos/500/350?2" alt="portfolio 2">
+      </div>
+      <div class="portfolio-item reveal">
+        <img src="https://picsum.photos/500/350?3" alt="portfolio 3">
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="about-text reveal">
-  <div class="container">
+<section id="about" class="about reveal">
+  <div class="container about-content">
     <h2>About Tendoon</h2>
     <p>We are a digital growth agency helping brands scale with marketing, AI automation and high-converting websites.</p>
     <p>Our mission is simple — turn ideas into powerful digital systems that generate real revenue.</p>
