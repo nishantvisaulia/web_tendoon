@@ -46,7 +46,7 @@ background: rgba(255,255,255,0.05);
 }
 
 .logo img {
-  height: 55px;
+  height: 75px;
   width: auto;
   transition: 0.4s ease;
   animation: floatLogo 4s ease-in-out infinite;
@@ -199,10 +199,26 @@ transition: 0.4s;
 transform: scale(1.05);
 }
 
+.portfolio h2 {
+  margin-bottom: 50px;
+}
+
+.portfolio .grid {
+  gap: 30px; /* pehle 25px tha */
+}
+
+.portfolio {
+  padding: 120px 0;
+}
+
 /* CTA */
 .cta {
-padding: 100px 20px;
-text-align: center;
+  padding: 120px 20px 140px; /* bottom extra space */
+  text-align: center;
+}
+
+.cta .btn {
+  margin-top: 25px; /* button neeche push */
 }
 
 /* WHATSAPP */
