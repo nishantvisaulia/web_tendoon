@@ -252,3 +252,46 @@ transition: 1s;
 opacity: 1;
 transform: translateY(0);
 }
+
+/* ===== FORCE FIX (OVERRIDE ALL ISSUES) ===== */
+
+/* FIX HERO CENTER */
+.hero-content {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* FIX EXTRA GAP ISSUE */
+section {
+  margin: 0 !important;
+}
+
+/* PORTFOLIO GRID FIX */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* IMAGE WRAPPER FIX */
+.portfolio-item {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+/* IMAGE FIX (NO OVERLAP) */
+.portfolio-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+}
