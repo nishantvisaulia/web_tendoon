@@ -92,7 +92,7 @@ width: 100%;
 
 /* BUTTON */
 .btn {
-  background: linear-gradient(135deg, #7b2ff7, #9b4dff);
+  background: linear-gradient(135deg, #9b4dff, #7b2ff7);
   color: #fff;
   padding: 10px 22px;
   border-radius: 30px;
@@ -107,8 +107,8 @@ width: 100%;
 }
 
 .btn-outline {
-  border: 1px solid #7b2ff7;
-  color: #7b2ff7;
+  border: 1px solid #9b4dff;
+  color: #9b4dff;
   padding: 10px 22px;
   border-radius: 30px;
   text-decoration: none;
@@ -116,7 +116,7 @@ width: 100%;
 }
 
 .btn-outline:hover {
-  background: #7b2ff7;
+  background: #9b4dff;
   color: #fff;
 }
 
@@ -297,4 +297,19 @@ section {
   .portfolio-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* HERO LOGO CENTER FIX */
+.hero-logo {
+  display: block;
+  margin: 0 auto 20px auto; /* center */
+  height: 60px;
+  opacity: 0.08;
+}
+
+.hero-content {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
 }
