@@ -15,7 +15,7 @@
 
 <body>
 
-<header class="header">
+<header class="header glass">
   <div class="container nav">
     <div class="logo">Tendoon</div>
 
@@ -38,13 +38,13 @@
 <!-- HERO -->
 
 <section class="hero">
-  <div class="container hero-content">
-    <h1>We Create Cinematic VFX Experiences</h1>
-    <p>High-end compositing, paint & roto for films and brands.</p>
+  <div class="container hero-content reveal">
+    <h1 class="gradient-text">Cinematic VFX. Premium Visuals.</h1>
+    <p>We craft high-end visual effects that elevate brands & films.</p>
 
 ```
 <div class="hero-buttons">
-  <a href="#" class="btn">Get Started</a>
+  <a href="#" class="btn">Start Project</a>
   <a href="#" class="btn-outline">View Work</a>
 </div>
 ```
@@ -56,28 +56,28 @@
 
 <section class="services">
   <div class="container">
-    <h2>Our Services</h2>
+    <h2 class="reveal">Our Expertise</h2>
 
 ```
 <div class="grid">
-  <div class="card">
+  <div class="card reveal">
     <h3>Roto</h3>
-    <p>Frame-by-frame precision work.</p>
+    <p>Frame-perfect masking precision.</p>
   </div>
 
-  <div class="card">
+  <div class="card reveal">
     <h3>Paint</h3>
-    <p>Cleanup & object removal.</p>
+    <p>Invisible cleanup & beauty fixes.</p>
   </div>
 
-  <div class="card">
+  <div class="card reveal">
     <h3>Compositing</h3>
-    <p>Film-level compositing quality.</p>
+    <p>Cinematic-level VFX blending.</p>
   </div>
 
-  <div class="card">
+  <div class="card reveal">
     <h3>VFX</h3>
-    <p>Complete visual storytelling.</p>
+    <p>End-to-end visual storytelling.</p>
   </div>
 </div>
 ```
@@ -89,13 +89,13 @@
 
 <section class="portfolio">
   <div class="container">
-    <h2>Our Work</h2>
+    <h2 class="reveal">Selected Work</h2>
 
 ```
 <div class="grid">
-  <img src="https://picsum.photos/400/300?1">
-  <img src="https://picsum.photos/400/300?2">
-  <img src="https://picsum.photos/400/300?3">
+  <img src="https://picsum.photos/500/350?1" class="reveal">
+  <img src="https://picsum.photos/500/350?2" class="reveal">
+  <img src="https://picsum.photos/500/350?3" class="reveal">
 </div>
 ```
 
@@ -104,18 +104,34 @@
 
 <!-- CTA -->
 
-<section class="cta">
-  <h2>Let’s Work Together</h2>
-  <a href="#" class="btn">Start Project</a>
+<section class="cta reveal">
+  <h2>Let’s Build Something Iconic</h2>
+  <a href="#" class="btn">Start Now</a>
 </section>
 
-<!-- WHATSAPP BUTTON -->
+<!-- WHATSAPP -->
 
-<a href="https://wa.me/your-number" class="whatsapp">💬</a>
+<a href="https://wa.me/91XXXXXXXXXX" class="whatsapp">💬</a>
 
 <footer class="footer">
   <p>© 2026 Tendoon</p>
 </footer>
+
+<script>
+  // SCROLL ANIMATION
+  const reveals = document.querySelectorAll('.reveal');
+
+  window.addEventListener('scroll', () => {
+    reveals.forEach(el => {
+      const windowHeight = window.innerHeight;
+      const elementTop = el.getBoundingClientRect().top;
+
+      if (elementTop < windowHeight - 100) {
+        el.classList.add('active');
+      }
+    });
+  });
+</script>
 
 </body>
 </html>
