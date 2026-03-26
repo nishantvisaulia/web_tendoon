@@ -403,25 +403,26 @@
         .scrollIntoView({ behavior: 'smooth' });
     });
   });
+
+  // ✅ FORM TO WHATSAPP (IMPORTANT)
+  document.querySelector(".contact-form").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    let name = this.querySelectorAll('input')[0].value;
+    let email = this.querySelectorAll('input')[1].value;
+    let business = this.querySelectorAll('input')[2].value;
+    let messageBox = this.querySelector('textarea').value;
+
+    let message =
+      "Hi, I'm " + name + "%0A" +
+      "Email: " + email + "%0A" +
+      "Business: " + business + "%0A" +
+      "Goal: " + messageBox;
+
+    window.open("https://wa.me/91XXXXXXXXXX?text=" + message, "_blank");
+  });
+
 </script>
 
 </body>
 </html>
-
-// ✅ FORM TO WHATSAPP
-document.querySelector(".contact-form").addEventListener("submit", function(e){
-  e.preventDefault();
-
-  let name = this.querySelectorAll('input')[0].value;
-  let email = this.querySelectorAll('input')[1].value;
-  let business = this.querySelectorAll('input')[2].value;
-  let messageBox = this.querySelector('textarea').value;
-
-  let message = 
-    "Hi, I'm " + name + "%0A" +
-    "Email: " + email + "%0A" +
-    "Business: " + business + "%0A" +
-    "Goal: " + messageBox;
-
-  window.open("https://wa.me/91XXXXXXXXXX?text=" + message, "_blank");
-});
