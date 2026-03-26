@@ -1,349 +1,336 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- META -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Tendoon</title>
 
-  <!-- CSS LINK -->
-  <link rel="stylesheet" href="style.css">
-
-  <!-- FONT AWESOME -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <!-- GOOGLE FONT -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    /* === Contact Form Styling === */
-    .contact-form input,
-    .contact-form textarea {
-      display: block;
-      width: 100%;
-      margin-bottom: 15px;
-      padding: 12px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      font-family: 'Poppins', sans-serif;
-    }
-
-    .contact-form button.btn {
-      background: linear-gradient(90deg, #6a0dad, #9b30ff);
-      color: white;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: 600;
-    }
-
-    /* Optional: Smooth scrolling highlight active nav link */
-    .nav-link.active {
-      color: #9b30ff;
-      font-weight: 700;
-    }
-  </style>
+  <!-- STYLES -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
 </head>
 
 <body>
 
-<!-- HEADER -->
-<header class="header glass">
-  <div class="container nav">
-    <div class="logo">
-      <img src="logo1.png" alt="Tendoon Logo">
+  <!-- ================= HEADER ================= -->
+  <header class="header glass">
+    <div class="container nav">
+      
+      <div class="logo">
+        <img src="logo1.png" alt="Tendoon Logo" />
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="#hero" class="nav-link">Home</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#portfolio" class="nav-link">Work</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+        </ul>
+      </nav>
+
+      <a href="https://wa.me/919004230084" class="btn" target="_blank">
+        Book Call
+      </a>
+
     </div>
+  </header>
 
-    <nav>
-      <ul>
-        <li><a href="#hero" class="nav-link">Home</a></li>
-        <li><a href="#services" class="nav-link">Services</a></li>
-        <li><a href="#portfolio" class="nav-link">Work</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-      </ul>
-    </nav>
+  <!-- ================= HERO ================= -->
+  <section id="hero" class="hero">
+    <div class="container hero-content reveal">
+      <img src="logo1.png" class="hero-logo" alt="logo" />
 
-    <a href="https://wa.me/919004230084" class="btn" target="_blank" rel="noopener noreferrer">Book Call</a>
-  </div>
-</header>
+      <h1 class="gradient-text">
+        We Don’t Just Market.<br />
+        We Build Growth Systems.
+      </h1>
 
-<!-- HERO -->
-<section id="hero" class="hero">
-  <div class="container hero-content reveal">
-    <img src="logo1.png" class="hero-logo" alt="logo">
-
-    <h1 class="gradient-text">
-      We Don’t Just Market.<br>
-      We Build Growth Systems.
-    </h1>
-
-    <p class="hero-sub">
-      AI-powered marketing, automation & high-converting websites
-      designed to generate predictable revenue.
-    </p>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section id="services" class="services reveal">
-  <div class="container">
-    <h2>Our Expertise</h2>
-
-    <!-- ITEM 1 -->
-    <div class="service-row">
-      <div class="service-text">
-        <h3>Digital Marketing</h3>
-        <p>ROI-driven ads, lead generation & scalable growth systems.</p>
-      </div>
-      <div class="service-img">
-        <img src="digital-marketing.png" alt="">
-      </div>
+      <p class="hero-sub">
+        AI-powered marketing, automation & high-converting websites designed to generate predictable revenue.
+      </p>
     </div>
+  </section>
 
-    <!-- ITEM 2 (reverse) -->
-    <div class="service-row reverse">
-      <div class="service-text">
-        <h3>AI Automation</h3>
-        <p>Automated workflows, chatbots & smart lead conversion systems.</p>
-      </div>
-      <div class="service-img">
-        <img src="ai-automation.png" alt="">
-      </div>
-    </div>
+  <!-- ================= SERVICES ================= -->
+  <section id="services" class="services reveal">
+    <div class="container">
+      <h2>Our Expertise</h2>
 
-    <!-- ITEM 3 -->
-    <div class="service-row">
-      <div class="service-text">
-        <h3>Web Development</h3>
-        <p>High-converting websites & funnels designed for sales.</p>
-      </div>
-      <div class="service-img">
-        <img src="web.png" alt="">
-      </div>
-    </div>
-
-    <!-- ITEM 4 -->
-    <div class="service-row reverse">
-      <div class="service-text">
-        <h3>Brand Strategy</h3>
-        <p>Premium positioning to attract high-value clients.</p>
-      </div>
-      <div class="service-img">
-        <img src="brand.png" alt="">
-      </div>
-    </div>
-
-    <!-- ITEM 5 -->
-    <div class="service-row">
-      <div class="service-text">
-        <h3>SEO & Organic Growth</h3>
-        <p>Rank higher on search & generate long-term free traffic.</p>
-      </div>
-      <div class="service-img">
-        <img src="seo.png" alt="">
-      </div>
-    </div>
-
-    <!-- ITEM 6 -->
-    <div class="service-row reverse">
-      <div class="service-text">
-        <h3>Analytics & Tracking</h3>
-        <p>Data-driven insights to optimize performance & ROI.</p>
-      </div>
-      <div class="service-img">
-        <img src="analytics.png" alt="">
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PORTFOLIO -->
-<section id="portfolio" class="portfolio reveal">
-  <div class="container">
-    <h2>Our Work</h2>
-
-    <div class="portfolio-grid">
-      <div class="portfolio-item reveal">
-        <img src="e-commerce.png" alt="">
-        <p class="portfolio-caption">E-commerce Growth Campaign</p>
+      <!-- SERVICE ITEM -->
+      <div class="service-row">
+        <div class="service-text">
+          <h3>Digital Marketing</h3>
+          <p>ROI-driven ads, lead generation & scalable growth systems.</p>
+        </div>
+        <div class="service-img">
+          <img src="digital-marketing.png" alt="Digital Marketing" />
+        </div>
       </div>
 
-      <div class="portfolio-item reveal">
-        <img src="ai-system.png" alt="">
-        <p class="portfolio-caption">AI Automation System</p>
+      <div class="service-row reverse">
+        <div class="service-text">
+          <h3>AI Automation</h3>
+          <p>Automated workflows, chatbots & smart lead conversion systems.</p>
+        </div>
+        <div class="service-img">
+          <img src="ai-automation.png" alt="AI Automation" />
+        </div>
       </div>
 
-      <div class="portfolio-item reveal">
-        <img src="funnel.png" alt="">
-        <p class="portfolio-caption">High-Converting Funnel</p>
+      <div class="service-row">
+        <div class="service-text">
+          <h3>Web Development</h3>
+          <p>High-converting websites & funnels designed for sales.</p>
+        </div>
+        <div class="service-img">
+          <img src="web.png" alt="Web Development" />
+        </div>
+      </div>
+
+      <div class="service-row reverse">
+        <div class="service-text">
+          <h3>Brand Strategy</h3>
+          <p>Premium positioning to attract high-value clients.</p>
+        </div>
+        <div class="service-img">
+          <img src="brand.png" alt="Brand Strategy" />
+        </div>
+      </div>
+
+      <div class="service-row">
+        <div class="service-text">
+          <h3>SEO & Organic Growth</h3>
+          <p>Rank higher on search & generate long-term free traffic.</p>
+        </div>
+        <div class="service-img">
+          <img src="seo.png" alt="SEO" />
+        </div>
+      </div>
+
+      <div class="service-row reverse">
+        <div class="service-text">
+          <h3>Analytics & Tracking</h3>
+          <p>Data-driven insights to optimize performance & ROI.</p>
+        </div>
+        <div class="service-img">
+          <img src="analytics.png" alt="Analytics" />
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- CASE STUDIES -->
-<section class="case-studies reveal">
-  <div class="container">
-    <h2>Case Studies</h2>
+  <!-- ================= PORTFOLIO ================= -->
+  <section id="portfolio" class="portfolio reveal">
+    <div class="container">
+      <h2>Our Work</h2>
 
-    <div class="grid">
-      <div class="card">
-        <h3>120+ Leads in 30 Days</h3>
-        <p>
-          Built a high-converting funnel and generated consistent leads for a service-based business.
-        </p>
-      </div>
+      <div class="portfolio-grid">
+        <div class="portfolio-item reveal">
+          <img src="e-commerce.png" alt="Ecommerce Project" />
+          <p class="portfolio-caption">E-commerce Growth Campaign</p>
+        </div>
 
-      <div class="card">
-        <h3>4.2x ROI Campaign</h3>
-        <p>
-          Optimized ad creatives and targeting to achieve strong return on investment.
-        </p>
-      </div>
+        <div class="portfolio-item reveal">
+          <img src="ai-system.png" alt="AI System" />
+          <p class="portfolio-caption">AI Automation System</p>
+        </div>
 
-      <div class="card">
-        <h3>3x Conversion Boost</h3>
-        <p>
-          Improved landing page performance with CRO and better user experience.
-        </p>
+        <div class="portfolio-item reveal">
+          <img src="funnel.png" alt="Funnel" />
+          <p class="portfolio-caption">High-Converting Funnel</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ABOUT -->
-<section id="about" class="about reveal">
-  <div class="container about-content">
-    <div class="about-flex">
+  <!-- ================= CASE STUDIES ================= -->
+  <section class="services reveal">
+    <div class="container">
+      <h2>Case Studies</h2>
 
-      <div class="about-image">
-        <img src="about.png" alt="About Tendoon">
+      <div class="grid">
+        <div class="card">
+          <h3>120+ Leads in 30 Days</h3>
+          <p>Built a high-converting funnel and generated consistent leads.</p>
+        </div>
+
+        <div class="card">
+          <h3>4.2x ROI Campaign</h3>
+          <p>Optimized ad creatives and targeting for strong ROI.</p>
+        </div>
+
+        <div class="card">
+          <h3>3x Conversion Boost</h3>
+          <p>Improved landing page with CRO and UX.</p>
+        </div>
       </div>
+    </div>
+  </section>
 
-      <div class="about-text">
-        <h2>About Tendoon</h2>
+  <!-- ================= ABOUT ================= -->
+  <section id="about" class="about reveal">
+    <div class="container about-content">
 
-        <p>Tendoon is a digital growth agency built for modern businesses that want to scale faster using data, AI and performance-driven strategies.</p>
+      <div class="about-flex">
+        <div class="about-image">
+          <img src="about.png" alt="About Tendoon" />
+        </div>
 
-        <p>We specialize in building high-converting funnels, running ROI-focused ad campaigns and creating automated systems that turn traffic into revenue.</p>
-
-        <p>Unlike traditional agencies, we focus on outcomes — leads, conversions and growth — not just vanity metrics.</p>
-
-        <p>Our mission is simple: to build predictable and scalable growth systems that help businesses achieve consistent results.</p>
-
-        <p>We work with service businesses, e-commerce brands and startups looking to scale their revenue.</p>
-
-        <p>Built by passionate marketers focused on delivering real growth, not just promises.</p>
+        <div class="about-text">
+          <h2>About Tendoon</h2>
+          <p>Tendoon is a digital growth agency focused on scaling businesses using data and AI.</p>
+          <p>We build high-converting funnels, ads and automation systems.</p>
+          <p>We focus on outcomes — leads, conversions and revenue.</p>
+        </div>
       </div>
 
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- READY TO SCALE FORM -->
-<section class="free-audit reveal">
-  <div class="container">
-    <h2>Ready to Scale Your Business?</h2>
-    <p>Let’s build a predictable growth system for you.</p>
+  <!-- ================= PRICING ================= -->
+  <section class="services reveal">
+    <div class="container">
+      <h2>Pricing Plans</h2>
 
-    <form class="contact-form">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <input type="text" placeholder="Your Business / Website">
-      <textarea placeholder="Tell us about your goals"></textarea>
-      <button type="submit" class="btn">Get Free Audit</button>
-    </form>
-  </div>
-</section>
+      <div class="grid">
 
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="social-icons">
-    <a href="https://wa.me/919004230084" target="_blank" rel="noopener noreferrer">
-      <i class="fab fa-whatsapp"></i>
-    </a>
+        <div class="card">
+          <h3>Starter Growth</h3>
+          <p><strong>$500 - $1,000 / month</strong></p>
+          <ul>
+            <li>Basic Ads Setup</li>
+            <li>1 Funnel</li>
+            <li>Monthly Optimization</li>
+          </ul>
+        </div>
 
-    <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
-      <i class="fab fa-linkedin"></i>
-    </a>
+        <div class="card">
+          <h3>Growth Pro</h3>
+          <p><strong>$1,500 - $3,000 / month</strong></p>
+          <ul>
+            <li>Advanced Campaigns</li>
+            <li>Automation</li>
+            <li>Weekly Optimization</li>
+          </ul>
+        </div>
 
-    <a href="https://x.com/tendoonofficial" target="_blank" rel="noopener noreferrer">
-      <i class="fab fa-x-twitter"></i>
-    </a>
+        <div class="card">
+          <h3>Scale Elite</h3>
+          <p><strong>$3,000+ / month</strong></p>
+          <ul>
+            <li>Full Growth System</li>
+            <li>AI + CRM</li>
+            <li>Daily Scaling</li>
+          </ul>
+        </div>
 
-    <a href="https://facebook.com/tendoon.official" target="_blank" rel="noopener noreferrer">
-      <i class="fab fa-facebook"></i>
-    </a>
-    
-    <a href="https://instagram.com/tendoon.official" target="_blank" rel="noopener noreferrer">
-      <i class="fab fa-instagram"></i>
-    </a>
-  </div>
+      </div>
+    </div>
+  </section>
 
-  <p>© 2026 Tendoon. All rights reserved.</p>
-</footer>
+  <!-- ================= CONTACT ================= -->
+  <section class="services reveal">
+    <div class="container">
+      <h2>Ready to Scale Your Business?</h2>
 
-<!-- JS -->
-<script>
-  // Reveal Animation
-  const reveals = document.querySelectorAll('.reveal');
-  window.addEventListener('scroll', () => {
-    reveals.forEach(el => {
-      const windowHeight = window.innerHeight;
-      const elementTop = el.getBoundingClientRect().top;
-      if (elementTop < windowHeight - 100) {
-        el.classList.add('active');
-      }
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <input type="text" placeholder="Your Business" />
+        <textarea placeholder="Your Goals"></textarea>
+
+        <button type="submit" class="btn">Get Free Audit</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-whatsapp"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-x-twitter"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+
+    <p>© 2026 Tendoon. All rights reserved.</p>
+  </footer>
+
+  <!-- ================= JS ================= -->
+  <script>
+    // Reveal Animation
+    const reveals = document.querySelectorAll(".reveal");
+
+    window.addEventListener("scroll", () => {
+      reveals.forEach(el => {
+        const windowHeight = window.innerHeight;
+        const elementTop = el.getBoundingClientRect().top;
+
+        if (elementTop < windowHeight - 100) {
+          el.classList.add("active");
+        }
+      });
     });
-  });
 
-  // Smooth Scroll + Active Nav
-  const sections = document.querySelectorAll('section');
-  const navLinks = document.querySelectorAll('.nav-link');
+    // Active Nav Link
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".nav-link");
 
-  window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop - 100;
-      if (pageYOffset >= sectionTop) {
-        current = section.getAttribute('id');
-      }
+    window.addEventListener("scroll", () => {
+      let current = "";
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 120;
+
+        if (window.scrollY >= sectionTop) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove("active");
+
+        if (link.getAttribute("href") === "#" + current) {
+          link.classList.add("active");
+        }
+      });
     });
 
-    navLinks.forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href') === '#' + current) {
-        link.classList.add('active');
-      }
-    });
-  });
+    // Smooth Scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function(e) {
+        e.preventDefault();
 
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+        document.querySelector(this.getAttribute("href"))
+          .scrollIntoView({ behavior: "smooth" });
+      });
+    });
+
+    // Form to WhatsApp
+    document.querySelector(".contact-form").addEventListener("submit", function(e) {
       e.preventDefault();
-      document.querySelector(this.getAttribute('href'))
-        .scrollIntoView({ behavior: 'smooth' });
+
+      const name = this.querySelectorAll("input")[0].value;
+      const email = this.querySelectorAll("input")[1].value;
+      const business = this.querySelectorAll("input")[2].value;
+      const goal = this.querySelector("textarea").value;
+
+      const message =
+        `Hi, I'm ${name}%0A` +
+        `Email: ${email}%0A` +
+        `Business: ${business}%0A` +
+        `Goal: ${goal}`;
+
+      const phone = "919004230084"; // Replace if needed
+
+      window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
     });
-  });
-
-  // FORM TO WHATSAPP
-  document.querySelector(".contact-form").addEventListener("submit", function(e){
-    e.preventDefault();
-
-    let name = this.querySelectorAll('input')[0].value;
-    let email = this.querySelectorAll('input')[1].value;
-    let business = this.querySelectorAll('input')[2].value;
-    let messageBox = this.querySelector('textarea').value;
-
-    let message =
-      "Hi, I'm " + name + "%0A" +
-      "Email: " + email + "%0A" +
-      "Business: " + business + "%0A" +
-      "Goal: " + messageBox;
-
-    window.open("https://wa.me/919004230084?text=" + message, "_blank");
-  });
-</script>
+  </script>
 
 </body>
 </html>
