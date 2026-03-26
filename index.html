@@ -348,7 +348,9 @@
   <div class="container">
     <h2>Ready to Scale Your Business?</h2>
     <p>Let’s build a predictable growth system for you.</p>
-    <a href="#" class="btn">Book Free Strategy Call</a>
+    <a href="https://wa.me/91XXXXXXXXXX" target="_blank" class="btn">
+  Book Free Strategy Call
+</a>
   </div>
 </section>
 
@@ -402,6 +404,24 @@
     });
   });
 </script>
+
+  // ✅ FORM TO WHATSAPP
+document.querySelector(".contact-form").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  let name = this.querySelectorAll('input')[0].value;
+  let email = this.querySelectorAll('input')[1].value;
+  let business = this.querySelectorAll('input')[2].value;
+  let messageBox = this.querySelector('textarea').value;
+
+  let message = 
+    "Hi, I'm " + name + "%0A" +
+    "Email: " + email + "%0A" +
+    "Business: " + business + "%0A" +
+    "Goal: " + messageBox;
+
+  window.open("https://wa.me/91XXXXXXXXXX?text=" + message, "_blank");
+});
 
 </body>
 </html>
