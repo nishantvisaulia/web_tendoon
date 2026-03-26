@@ -437,14 +437,14 @@ nav a:hover::after {
   margin: 0 auto; /* center the form */
 }
 
-.contact-form input,
+.contact-form input, 
 .contact-form textarea {
-  padding: 15px;
-  border-radius: 10px;
-  border: none;
-  background: rgba(255,255,255,0.05);
-  color: #fff;
-  font-size: 16px;
+  display: block;
+  width: 100%;
+  margin-bottom: 15px; /* adds spacing */
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
 }
 
 .contact-form textarea {
