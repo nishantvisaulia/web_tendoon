@@ -435,3 +435,7 @@ nav a:hover::after {
 .btn[href="#contact"] {
   scroll-behavior: smooth;
 }
+
+section {
+  scroll-margin-top: 100px;
+}
