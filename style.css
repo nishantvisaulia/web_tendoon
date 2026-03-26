@@ -411,50 +411,35 @@ nav a:hover::after {
   transform: scale(1.05);
 }
 
-/* ===== CONTACT / CTA SPACING FIX ===== */
+/* ===== CONTACT SECTION ===== */
 #contact {
-  padding: 120px 20px; /* space from top */
+  padding: 100px 20px;
   background: rgba(255,255,255,0.02);
-  text-align: center;
-}
-
-#contact h2 {
-  font-size: 36px;
-  margin-bottom: 20px; /* space between heading and subtext */
-}
-
-#contact p {
-  font-size: 18px;
-  color: #aaa;
-  margin-bottom: 40px; /* space between subtext and form/button */
 }
 
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 20px; /* space between form fields */
+  gap: 15px;
   max-width: 500px;
-  margin: 0 auto; /* center the form */
+  margin: auto;
 }
 
-.contact-form input, 
+.contact-form input,
 .contact-form textarea {
-  display: block;
-  width: 100%;
-  margin-bottom: 15px; /* adds spacing */
-  padding: 10px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255,255,255,0.05);
+  color: #fff;
 }
 
 .contact-form textarea {
-  min-height: 120px;
+  min-height: 100px;
 }
 
 .contact-form button {
-  margin-top: 15px;
-  padding: 12px 25px;
-  font-size: 16px;
+  margin-top: 10px;
 }
 
 /* ===== SOCIAL ICONS ===== */
