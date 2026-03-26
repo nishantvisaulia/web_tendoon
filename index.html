@@ -54,33 +54,39 @@
 </section>
 
 <!-- SERVICES / OUR EXPERTISE -->
-<div class="card reveal">
-  <h3>Digital Marketing</h3>
-  <p>ROI-driven ads, lead generation & scalable growth systems.</p>
-</div>
+<div class="grid">
 
-<div class="card reveal">
-  <h3>AI Automation</h3>
-  <p>Automated workflows, chatbots & smart lead conversion systems.</p>
-</div>
-
-<div class="card reveal">
-  <h3>Web Development</h3>
-  <p>High-converting websites & funnels designed for sales.</p>
-</div>
-
-<div class="card reveal">
-  <h3>Brand Strategy</h3>
-  <p>Premium positioning to attract high-value clients.</p>
-</div>
   <div class="card reveal">
-  <h3>SEO & Organic Growth</h3>
-  <p>Rank higher on search & generate long-term free traffic.</p>
-</div>
+    <h3>Digital Marketing</h3>
+    <p>ROI-driven ads, lead generation & scalable growth systems.</p>
+  </div>
 
-<div class="card reveal">
-  <h3>Analytics & Tracking</h3>
-  <p>Data-driven insights to optimize performance & ROI.</p>
+  <div class="card reveal">
+    <h3>AI Automation</h3>
+    <p>Automated workflows, chatbots & smart lead conversion systems.</p>
+  </div>
+
+  <div class="card reveal">
+    <h3>Web Development</h3>
+    <p>High-converting websites & funnels designed for sales.</p>
+  </div>
+
+  <div class="card reveal">
+    <h3>Brand Strategy</h3>
+    <p>Premium positioning to attract high-value clients.</p>
+  </div>
+
+  <!-- NEW CARDS (INSIDE GRID ONLY) -->
+  <div class="card reveal">
+    <h3>SEO & Organic Growth</h3>
+    <p>Rank higher on search & generate long-term free traffic.</p>
+  </div>
+
+  <div class="card reveal">
+    <h3>Analytics & Tracking</h3>
+    <p>Data-driven insights to optimize performance & ROI.</p>
+  </div>
+
 </div>
 
 <!-- PORTFOLIO -->
@@ -177,6 +183,14 @@
       }
     });
   });
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href'))
+      .scrollIntoView({ behavior: 'smooth' });
+  });
+});
 </script>
 
 </body>
