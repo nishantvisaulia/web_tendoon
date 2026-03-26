@@ -215,7 +215,7 @@ nav a:hover::after {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .grid {
     grid-template-columns: 1fr;
   }
@@ -225,6 +225,7 @@ nav a:hover::after {
 .services {
   padding: 80px 0;
   text-align: center;
+  margin-bottom: 80px; /* space before next section */
 }
 
 .services h2 {
@@ -240,7 +241,6 @@ nav a:hover::after {
   border: 1px solid rgba(255,255,255,0.08);
 }
 
-/* ===== CARD HOVER EFFECT ===== */
 .card:hover {
   transform: translateY(-10px) scale(1.02);
   box-shadow: 0 10px 30px rgba(123, 47, 247, 0.3);
@@ -250,6 +250,7 @@ nav a:hover::after {
 .portfolio {
   padding: 80px 0;
   text-align: center;
+  margin-bottom: 80px; /* space before next section */
 }
 
 .portfolio h2 {
@@ -313,8 +314,7 @@ nav a:hover::after {
 }
 
 .cta p {
-  margin-top: 10px;
-  margin-bottom: 20px; /* gap add karega button se */
+  margin: 10px 0 20px; /* space between text and button */
   color: #aaa;
 }
 
@@ -344,6 +344,7 @@ nav a:hover::after {
   background: rgba(255,255,255,0.02);
   border-top: 1px solid rgba(255,255,255,0.05);
   border-bottom: 1px solid rgba(255,255,255,0.05);
+  margin-bottom: 80px; /* space before next section */
 }
 
 /* ===== ABOUT FLEX LAYOUT ===== */
@@ -367,78 +368,6 @@ nav a:hover::after {
   color: #aaa;
   font-size: 18px;
   line-height: 1.7;
-}
-
-/* ===== MOBILE RESPONSIVE ===== */
-@media (max-width: 1024px) {
-  .hero h1 {
-    font-size: 48px;
-  }
-  .hero-sub {
-    font-size: 16px;
-  }
-}
-
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .portfolio-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hero h1 {
-    font-size: 36px;
-  }
-
-  .hero-sub {
-    font-size: 15px;
-  }
-
-  .about-content {
-    gap: 25px;
-    padding: 0 15px;
-  }
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 1024px) {
-  .about-content .about-flex {
-    gap: 30px;
-  }
-}
-
-@media (max-width: 768px) {
-  .about-content .about-flex {
-    flex-direction: column;
-  }
-
-  .about-image img {
-    max-width: 100%;
-  }
-
-  .portfolio-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hero h1 {
-    font-size: 36px;
-  }
-
-  .hero-sub {
-    font-size: 15px;
-  }
-}
-
-/* ===== BUTTON SCROLL TO CONTACT ===== */
-.btn[href="#contact"] {
-  scroll-behavior: smooth;
-}
-
-section {
-  scroll-margin-top: 100px;
 }
 
 /* ===== SERVICE ROW LAYOUT ===== */
@@ -482,12 +411,10 @@ section {
   transform: scale(1.05);
 }
 
-/* MOBILE */
-@media (max-width: 768px) {
-  .service-row,
-  .service-row.reverse {
-    flex-direction: column;
-  }
+/* ===== CONTACT SECTION ===== */
+#contact {
+  padding: 100px 20px;
+  background: rgba(255,255,255,0.02);
 }
 
 .contact-form {
@@ -498,7 +425,6 @@ section {
   margin: auto;
 }
 
-/* Contact Form */
 .contact-form input,
 .contact-form textarea {
   padding: 12px;
@@ -542,6 +468,50 @@ section {
   transform: translateY(-5px);
 }
 
-section {
-  scroll-margin-top: 100px;
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .hero h1 {
+    font-size: 48px;
+  }
+  .hero-sub {
+    font-size: 16px;
+  }
+  .about-content .about-flex {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero-sub {
+    font-size: 15px;
+  }
+
+  .about-content .about-flex {
+    flex-direction: column;
+  }
+
+  .about-image img {
+    max-width: 100%;
+  }
+
+  .service-row,
+  .service-row.reverse {
+    flex-direction: column;
+  }
 }
