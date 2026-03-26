@@ -312,21 +312,10 @@ nav a:hover::after {
   margin-top: 10px;
 }
 
-/* ===== WHATSAPP BUTTON ===== */
-.whatsapp {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25D366;
-  padding: 15px;
-  border-radius: 50%;
-  color: #fff;
-  text-decoration: none;
-  font-size: 22px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
+.cta p {
+  margin-top: 10px;
+  margin-bottom: 20px; /* gap add karega button se */
+  color: #aaa;
 }
 
 /* ===== FOOTER ===== */
@@ -551,4 +540,8 @@ section {
 .social-icons a:hover {
   background: #9b4dff;
   transform: translateY(-5px);
+}
+
+section {
+  scroll-margin-top: 100px;
 }
