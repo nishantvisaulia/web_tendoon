@@ -451,3 +451,52 @@ nav a:hover::after {
 section {
   scroll-margin-top: 100px;
 }
+
+/* ===== SERVICE ROW LAYOUT ===== */
+.service-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  margin: 80px 0;
+}
+
+.service-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.service-text {
+  flex: 1;
+}
+
+.service-text h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.service-text p {
+  color: #aaa;
+  font-size: 16px;
+}
+
+.service-img {
+  flex: 1;
+}
+
+.service-img img {
+  width: 100%;
+  border-radius: 15px;
+  transition: 0.4s;
+}
+
+.service-img img:hover {
+  transform: scale(1.05);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .service-row,
+  .service-row.reverse {
+    flex-direction: column;
+  }
+}
