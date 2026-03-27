@@ -538,22 +538,12 @@ section {
 }
 
 /* Force Spacing */
-h1 {
-  margin-bottom: 50px !important;
-}
-
-#case-study h1,
-#our-work h1,
-#pricing h1 {
-  margin-bottom: 50px;
+section h2 {
+  margin-bottom: 40px;
 }
 
 .grid {
-  margin-top: 30px;
-}
-
-h1 {
-  border: 2px solid red;
+  margin-top: 20px;
 }
 
 .grid {
