@@ -64,8 +64,13 @@ body {
 /* ===== NAVIGATION ===== */
 nav ul {
   display: flex;
-  gap: 35px;
-  list-style: none;
+  gap: 40px;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
 }
 
 nav a {
@@ -140,7 +145,7 @@ nav a:hover::after {
 
 .hero-content {
   width: 100%;
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -391,8 +396,14 @@ nav a:hover::after {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 40px;
-  margin: 80px 0;
+  gap: 50px;
+  margin: 100px 0;
+}
+
+@media (max-width: 1024px) {
+  .service-row {
+    flex-direction: column;
+  }
 }
 
 .service-row.reverse {
@@ -546,8 +557,10 @@ section {
 }
 
 .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 section h2 {
