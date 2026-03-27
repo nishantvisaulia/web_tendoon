@@ -219,7 +219,7 @@ We build high-converting funnels, run ROI-focused ads, and automate your growth 
   <section id="about" class="about reveal">
   <div class="container about-content">
 
-    <h1 style="text-align:center; margin-bottom:40px;">About Tendoon</h1>
+    <h2 style="text-align:center; margin-bottom:40px;">About Tendoon</h2>
 
     <div class="about-flex">
         <div class="about-image">
@@ -417,6 +417,13 @@ window.addEventListener("scroll", () => {
       });
     });
 
+     // Fix for last section (contact)
+window.addEventListener("scroll", () => {
+  if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 50) {
+    navLinks.forEach(link => link.classList.remove("active"));
+    document.querySelector('a[href="#contact"]').classList.add("active");
+  }
+});
 
 
     // Form to WhatsApp
