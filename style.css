@@ -323,7 +323,10 @@ section h2 {
   transition: 0.3s;
 }
 
-.sticky-btn:hover { transform: scale(1.05); }
+.sticky-btn:hover {
+  transform: scale(1.1) translateY(-5px); /* Halka aur bada zoom */
+  box-shadow: 0 0 30px 8px rgba(155, 77, 255, 0.7); /* Extra glow for the main CTA */
+}
 
 /* ===== 8. BUTTONS & ANIMATIONS (Updated with Glow Effect) ===== */
 .btn, .btn-outline, .card .btn, .contact-form .btn {
@@ -370,6 +373,29 @@ section h2 {
   
   border-color: rgba(255, 255, 255, 0.5); /* Border chamkegi */
   color: white;
+}
+
+/* ===== SPECIFIC WHITE GLOW FOR VIEW CASE STUDIES BUTTON ===== */
+
+/* 1. Pehle ye check karein ki button ka style sahi ho */
+.btn-outline {
+  background: transparent;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  transition: all 0.5s ease;
+}
+
+/* 2. Hover par Pure White Glow effect */
+.btn-outline:hover {
+  background: #ffffff; /* Hover karne par background white ho jaye */
+  color: #000000;      /* Text black ho jaye taaki white par dikhe */
+  transform: scale(1.05);
+  
+  /* Pure White Glow Shadow */
+  box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.8), 
+              0 0 40px 10px rgba(255, 255, 255, 0.4);
+  
+  border-color: #ffffff; /* Border bhi white ho jaye */
 }
 
 /* Pricing aur Contact buttons ke liye special spacing */
