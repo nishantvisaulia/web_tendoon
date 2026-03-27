@@ -145,6 +145,16 @@ nav a:hover::after {
   animation: fadeUp 1.2s ease;
 }
 
+.hero-content {
+  max-width: 800px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* 🔥 ye important hai */
+  justify-content: center;
+  text-align: center;
+}
+
 .hero h1 {
   font-size: 64px;
   font-weight: 700;
@@ -229,7 +239,7 @@ section {
 
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(3, 1fr); /* 🔥 fix */
   gap: 25px;
 }
 
@@ -293,9 +303,11 @@ section {
 /* ===== SERVICE ROW ===== */
 .service-row {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   gap: 40px;
   margin: 80px 0;
-  align-items: center;
+  flex-direction: row;   /* 🔥 force side-by-side */
 }
 
 .service-row.reverse {
@@ -338,6 +350,11 @@ section {
   display: flex;
   justify-content: center;
   gap: 20px;
+  margin-bottom: 20px;  /* 🔥 important */
+}
+
+.footer p {
+  margin-top: 10px;
 }
 
 .social-icons a {
@@ -427,4 +444,18 @@ section {
   .service-row.reverse {
     flex-direction: column;
   }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .service-row,
+  .service-row.reverse {
+    flex-direction: column;
+  }
+
+@media (max-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+}
 }
