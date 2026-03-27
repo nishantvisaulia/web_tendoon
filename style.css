@@ -218,7 +218,7 @@ section h2 {
   text-align: center;
 }
 
-/* ===== SERVICES ===== */
+/* ===== SERVICES IMAGES ===== */
 .services {
   padding: 80px 0;
   text-align: center;
@@ -231,17 +231,40 @@ section h2 {
 }
 
 .service-img img {
-  width: 80%;          /* 👈 size reduce */
-  max-width: 350px;    /* 👈 control */
+  width: 90%;          /* 👈 size */
+  max-width: 420px;    /* 👈 control */
   margin: auto;        /* 👈 center */
   display: block;
   border-radius: 15px;
-  transition: 0.4s;
+  transition: all 0.4s;
 }
 
 .service-img {
   display: flex;
   justify-content: center;
+}
+
+.service-img img:hover {
+  transform: scale(1.08);
+}
+
+/* GLOW EFFECT */
+.service-img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(155, 77, 255, 0.3),
+    transparent
+  );
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.service-img:hover::after {
+  opacity: 1;
 }
 
 /* CARD */
@@ -266,7 +289,7 @@ section h2 {
 
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(3, 1fr); /* 👈 3 fixed columns */
   gap: 25px;
 }
 
@@ -274,6 +297,11 @@ section h2 {
   position: relative;
   border-radius: 15px;
   overflow: hidden;
+}
+
+.portfolio-item {
+  width: 100%;
+  height: 250px;   /* 👈 same height for all */
 }
 
 .portfolio-item img {
@@ -300,6 +328,12 @@ section h2 {
 
 .portfolio-item:hover .portfolio-caption {
   opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr; /* mobile me 1-1 */
+  }
 }
 
 /* ===== ABOUT ===== */
@@ -337,6 +371,15 @@ section h2 {
 
 .service-row.reverse {
   flex-direction: row-reverse;
+}
+
+.service-row:hover .service-img img {
+  transform: scale(1.1);
+}
+
+.service-row:hover .service-text h3 {
+  color: #9b4dff;
+  transition: 0.3s;
 }
 
 /* ===== CONTACT ===== */
