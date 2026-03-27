@@ -55,11 +55,10 @@ body {
   align-items: center;
 }
 
-/* Header Logo - Ab ye float karega */
 .logo img {
   height: 50px; 
   transition: var(--transition);
-  animation: float 3s ease-in-out infinite; /* Animation yahan add kiya */
+  animation: float 3s ease-in-out infinite;
 }
 
 nav ul {
@@ -73,44 +72,33 @@ nav ul {
   text-decoration: none;
   font-size: 15px;
   opacity: 0.8;
-  position: relative; /* Underline positioning ke liye zaroori hai */
+  position: relative;
   transition: var(--transition);
   padding: 5px 0;
 }
 
-/* Hover par color change nahi hoga, sirf opacity badhegi */
-.nav-link:hover {
-  opacity: 1;
-}
+.nav-link:hover { opacity: 1; }
 
-/* Smooth Underline Effect */
 .nav-link::after {
   content: "";
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 0; /* Shuruat mein width 0 rahegi */
+  width: 0;
   height: 2px;
   background: var(--primary);
-  transition: width 0.3s ease; /* Smooth sliding effect */
+  transition: width 0.3s ease;
 }
 
-.nav-link:hover::after {
-  width: 100%; /* Hover karne par line puri dikhegi */
-}
+.nav-link:hover::after, 
+.nav-link.active::after { width: 100%; }
 
-/* Active State - Jab button active ho tabhi color badlega */
 .nav-link.active {
   color: var(--primary);
   opacity: 1;
 }
 
-.nav-link.active::after {
-  width: 100%; /* Active page par underline hamesha dikhegi */
-}
-
 /* ===== 3. HERO SECTION ===== */
-/* ===== 3. HERO SECTION (Logo Big Fix) ===== */
 .hero {
   min-height: 100vh;
   display: flex;
@@ -118,30 +106,21 @@ nav ul {
   justify-content: center;
   text-align: center;
   padding-top: 120px;
-  /* Glow ko kam karne ke liye opacity 0.08 aur 0.05 rakhi hai */
   background: radial-gradient(circle at top left, rgba(155, 77, 255, 0.08), transparent 30%),
               radial-gradient(circle at bottom right, rgba(123, 47, 247, 0.05), transparent 30%);
 }
 
-/* Hero Logo - Motion removed, size increased */
 .hero-logo {
-  height: 180px; /* Size bada kar diya hai */
+  height: 180px;
   width: auto;
   margin-bottom: 30px;
-  filter: drop-shadow(0 0 10px rgba(155, 77, 255, 0.2)); /* Purple glow thoda kam kiya */
-  /* Animation removed from here */
-}
-
-/* Animation Keyframes (Same as before) */
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
+  filter: drop-shadow(0 0 10px rgba(155, 77, 255, 0.2));
 }
 
 .hero-content {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Items ko horizontally center karega */
+  align-items: center;
   justify-content: center;
   width: 100%;
 }
@@ -149,14 +128,9 @@ nav ul {
 .hero h1 {
   font-size: clamp(2.2rem, 6vw, 3.8rem);
   line-height: 1.1;
-  margin-bottom: 25px;
+  margin: 0 auto 25px;
   font-weight: 700;
   max-width: 900px;
-}
-
-.hero h1 {
-  margin-left: auto;
-  margin-right: auto;
   text-align: center;
 }
 
@@ -165,10 +139,6 @@ nav ul {
   color: var(--text-muted);
   max-width: 750px;
   margin: 0 auto 40px;
-}
-
-.hero-sub {
-  margin: 0 auto 40px; /* Top 0, Left/Right Auto, Bottom 40px */
   text-align: center;
 }
 
@@ -186,17 +156,20 @@ nav ul {
 }
 
 /* ===== 4. BUTTONS ===== */
-.btn {
-  background: var(--primary);
-  color: white;
+.btn, .btn-outline {
   padding: 12px 28px;
   border-radius: 50px;
   text-decoration: none;
   font-weight: 600;
   display: inline-block;
   transition: var(--transition);
-  border: none;
   cursor: pointer;
+}
+
+.btn {
+  background: var(--primary);
+  color: white;
+  border: none;
 }
 
 .btn:hover {
@@ -205,12 +178,8 @@ nav ul {
 }
 
 .btn-outline {
-  padding: 12px 28px;
-  border-radius: 50px;
-  text-decoration: none;
   border: 1px solid var(--primary);
   color: var(--primary);
-  transition: var(--transition);
 }
 
 .btn-outline:hover {
@@ -218,9 +187,16 @@ nav ul {
   color: white;
 }
 
-/* ===== 5. SERVICES (Row Logic) ===== */
-.services {
-  padding: 100px 0;
+/* ===== 5. LAYOUT SECTIONS (Spacing & Rows) ===== */
+.services, .portfolio, .about, #case-study, #contact {
+  padding: 160px 0;
+}
+
+section h2 {
+  margin-top: 20px;
+  margin-bottom: 60px;
+  font-size: 2.0rem;
+  text-align: center;
 }
 
 .service-row {
@@ -230,13 +206,9 @@ nav ul {
   margin-bottom: 80px;
 }
 
-.service-row.reverse {
-  flex-direction: row-reverse;
-}
+.service-row.reverse { flex-direction: row-reverse; }
 
-.service-text, .service-img {
-  flex: 1;
-}
+.service-text, .service-img { flex: 1; }
 
 .service-text h3 {
   font-size: 2rem;
@@ -244,79 +216,48 @@ nav ul {
   color: var(--primary);
 }
 
-/* Saari images par hover effect (Expertise & About) */
-.service-img img {
+.service-img img, .about-image img {
   width: 100%;
   border-radius: 20px;
   border: 1px solid var(--border-glass);
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* Smooth movement */
   box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-}
-
-/* Sabhi major sections ke upar aur niche space badhane ke liye */
-.services, .portfolio, .about, #case-study, #contact {
-  padding: 160px 0; /* Space 100px se badha kar 160px kar diya hai */
-}
-
-/* Heading ke upar extra breathing room dene ke liye */
-section h2 {
-  margin-top: 20px;
-  margin-bottom: 80px; /* Heading aur content ke beech ka gap */
-  font-size: 2.8rem;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .service-img img:hover, .about-image img:hover {
-  transform: scale(1.05); /* Image halki si badi hogi */
-  box-shadow: 0 15px 30px rgba(155, 77, 247, 0.3); /* Purple glow on hover */
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(155, 77, 247, 0.3);
 }
 
-
-/* ===== 6. CARDS & GRID (For Testimonials/Pricing) ===== */
+/* ===== 6. GRID & CARDS (Unified) ===== */
 .grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 barabar columns banayega */
-  gap: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
   width: 100%;
   margin-top: 50px;
-}
-
-/* Mobile par ye automatically stack ho jayenge */
-@media (max-width: 992px) {
-  .grid {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  }
-}
-
-.grid {
-  display: flex; /* Flex use karne se horizontal alignment zyada stable rehti hai */
-  flex-wrap: wrap; 
-  justify-content: center;
-  gap: 25px;
-  margin-top: 50px;
-}
-
-.grid .card {
-  flex: 1; /* Cards ko barabar jagah milegi */
-  min-width: 300px; /* Mobile par stack hone ke liye */
-  max-width: 400px; /* Zyada bada na ho isliye cap lagaya hai */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* Content proper align rahega */
-  text-align: center;
 }
 
 .card {
   background: var(--glass);
-  padding: 40px;
+  padding: 40px 25px;
   border-radius: 20px;
   border: 1px solid var(--border-glass);
+  text-align: center;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 300px;
+  max-width: 400px;
   transition: var(--transition);
 }
 
 .card:hover {
+  transform: translateY(-10px);
   border-color: var(--primary);
   background: rgba(255, 255, 255, 0.08);
-  transform: translateY(-10px);
 }
 
 .card h3 {
@@ -330,12 +271,13 @@ section h2 {
   text-align: left;
 }
 
-.card ul li {
+.card li {
   margin-bottom: 10px;
   color: var(--text-muted);
+  font-size: 15px;
 }
 
-.card ul li::before {
+.card li::before {
   content: "✓ ";
   color: var(--primary);
 }
@@ -343,7 +285,7 @@ section h2 {
 /* ===== 7. PORTFOLIO ===== */
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Width badhane ke liye min-width 350px kiya */
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 30px;
 }
 
@@ -352,7 +294,7 @@ section h2 {
   border-radius: 20px;
   overflow: hidden;
   border: 1px solid var(--border-glass);
-  aspect-ratio: 16 / 9; /* Landscape look ke liye */
+  aspect-ratio: 16 / 9;
 }
 
 .portfolio-item img {
@@ -362,15 +304,13 @@ section h2 {
   transition: transform 0.6s ease;
 }
 
+.portfolio-item:hover img { transform: scale(1.1); }
+
 .portfolio-caption {
   padding: 15px;
   background: rgba(10, 10, 10, 0.9);
   text-align: center;
   font-weight: 500;
-}
-
-.portfolio-item:hover img {
-  transform: scale(1.1); /* Zoom effect */
 }
 
 /* ===== 8. ABOUT & CONTACT ===== */
@@ -380,11 +320,6 @@ section h2 {
   gap: 50px;
 }
 
-.about-image img {
-  max-width: 100%;
-  border-radius: 20px;
-}
-
 .contact-form {
   display: grid;
   gap: 15px;
@@ -392,8 +327,7 @@ section h2 {
   margin: 40px auto;
 }
 
-.contact-form input, 
-.contact-form textarea {
+.contact-form input, .contact-form textarea {
   background: var(--glass);
   border: 1px solid var(--border-glass);
   padding: 15px;
@@ -403,10 +337,7 @@ section h2 {
   font-family: inherit;
 }
 
-.contact-form input:focus, 
-.contact-form textarea:focus {
-  border-color: var(--primary);
-}
+.contact-form input:focus, .contact-form textarea:focus { border-color: var(--primary); }
 
 /* ===== 9. FOOTER ===== */
 .footer {
@@ -433,7 +364,12 @@ section h2 {
   transform: translateY(-5px);
 }
 
-/* ===== 10. UTILITIES & ANIMATIONS ===== */
+/* ===== 10. UTILITIES & STICKY BUTTON ===== */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(30px);
@@ -447,9 +383,9 @@ section h2 {
 
 .sticky-btn {
   position: fixed;
-  bottom: 30px; /* Screen ke niche se gap */
-  right: 30px;  /* Screen ke right se gap */
-  z-index: 9999; /* Isse button hamesha sabse upar rahega */
+  bottom: 30px;
+  right: 30px;
+  z-index: 10000;
   background: var(--primary);
   color: white;
   padding: 15px 32px;
@@ -457,7 +393,7 @@ section h2 {
   text-decoration: none;
   font-weight: 700;
   font-size: 16px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Button ko depth dene ke liye */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   transition: var(--transition);
 }
 
@@ -469,22 +405,21 @@ section h2 {
 /* ===== 11. RESPONSIVE ===== */
 @media (max-width: 992px) {
   .service-row, .service-row.reverse, .about-flex {
-    flex-direction: column;
+    flex-direction: column !important;
     text-align: center;
   }
   
-  nav ul {
-    display: none; /* Consider adding a mobile menu icon */
+  .grid {
+    flex-direction: column;
+    align-items: center;
   }
+  
+  .card { max-width: 450px; width: 100%; }
+
+  nav ul { display: none; }
 }
 
 @media (max-width: 768px) {
-  .hero-buttons {
-    flex-direction: column;
-  }
-  .section-padding {
-    padding: 60px 0;
-  }
+  .hero-buttons { flex-direction: column; }
+  .section-padding { padding: 60px 0; }
 }
-
-
