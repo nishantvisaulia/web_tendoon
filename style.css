@@ -80,33 +80,43 @@ nav ul {
 }
 
 /* ===== 3. HERO SECTION ===== */
+/* ===== 3. HERO SECTION (Logo Big Fix) ===== */
 .hero {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding-top: 100px;
+  padding-top: 120px; /* Header ke niche space */
   background: radial-gradient(circle at top left, rgba(155, 77, 255, 0.15), transparent 40%),
               radial-gradient(circle at bottom right, rgba(123, 47, 247, 0.1), transparent 40%);
 }
 
 .hero-logo {
-  height: 80px;
-  margin-bottom: 20px;
+  height: 120px; /* HERO LOGO SIZE BADA KAR DIYA HAI */
+  width: auto;
+  margin-bottom: 30px;
+  filter: drop-shadow(0 0 15px var(--primary-glow)); /* Subtle glow */
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }
 
 .hero h1 {
-  font-size: clamp(2rem, 6vw, 3.5rem);
-  line-height: 1.2;
-  margin-bottom: 20px;
+  font-size: clamp(2.2rem, 6vw, 3.8rem);
+  line-height: 1.1;
+  margin-bottom: 25px;
   font-weight: 700;
+  max-width: 900px;
 }
 
 .hero-sub {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: var(--text-muted);
-  max-width: 700px;
+  max-width: 750px;
   margin: 0 auto 40px;
 }
 
@@ -120,7 +130,7 @@ nav ul {
   margin-top: 60px;
   font-size: 14px;
   color: var(--text-muted);
-  letter-spacing: 1px;
+  opacity: 0.7;
 }
 
 /* ===== 4. BUTTONS ===== */
