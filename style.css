@@ -107,7 +107,9 @@ nav a:hover::after {
 /* 🔥 HERO LOGO FIX */
 .hero-logo {
   width: 120px;
-  margin-bottom: 20px;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px;
 }
 
 .hero h1 {
@@ -145,11 +147,20 @@ nav a:hover::after {
 
 .service-text {
   flex: 1;
-  text-align: left;
 }
 
 .service-img {
   flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.service-img img {
+  width: 100%;
+  max-width: 350px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
 }
 
 /* IMAGE SIZE FIX */
@@ -239,9 +250,6 @@ nav a:hover::after {
 }
 
 .social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
   margin-bottom: 15px;
 }
 
@@ -253,6 +261,10 @@ nav a:hover::after {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+}
+
+.footer p {
+  margin-top: 10px;
 }
 
 /* ===== STICKY BUTTON ===== */
@@ -271,6 +283,7 @@ nav a:hover::after {
 
   nav ul {
     flex-direction: column;
+    gap: 15px;
   }
 
   .hero h1 {
@@ -288,6 +301,7 @@ nav a:hover::after {
   .service-row,
   .service-row.reverse {
     flex-direction: column;
+    text-align: center;
   }
 
   .about-flex {
