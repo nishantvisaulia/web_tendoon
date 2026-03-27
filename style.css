@@ -121,6 +121,10 @@ nav a:hover::after {
   color: #fff;
 }
 
+.nav-link.active {
+  color: #9b4dff; /* purple */
+}
+
 /* ===== HERO SECTION ===== */
 .hero {
   min-height: 100vh;
