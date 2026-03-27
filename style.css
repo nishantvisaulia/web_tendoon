@@ -91,6 +91,11 @@ nav a:hover::after {
   width: 100%;
 }
 
+.nav-link.active {
+  color: #9b30ff;
+  font-weight: 700;
+}
+
 /* ===== BUTTONS ===== */
 .btn {
   background: linear-gradient(135deg, #9b4dff, #7b2ff7);
@@ -577,4 +582,16 @@ ul li {
   text-decoration: none;
   z-index: 1000;
   box-shadow: 0 0 15px rgba(123, 47, 247, 0.5);
+}
+
+.stats-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
 }
