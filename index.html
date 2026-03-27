@@ -44,7 +44,8 @@
         </ul>
       </nav>
 
-      <a href="https://wa.me/919004230084" class="btn" target="_blank">Book Call</a>
+      <a href="#contact" class="btn">Book Call</a>
+      
 
     </div>
   </header>
@@ -245,6 +246,7 @@
   <!-- ================= CONTACT ================= -->
   <section id="contact" class="contact reveal">
     <div class="container">
+      <div class="about-flex">
       <h2>Ready to Scale Your Business?</h2>
       <p>Let’s build a predictable growth system for you.</p>
       
@@ -257,7 +259,7 @@
 
         <button type="submit" class="btn">Contact Us</button>
       </form>
-    </div>
+    </div></div>
   </section>
 
   <!-- ================= FOOTER ================= -->
@@ -314,28 +316,28 @@
     });
 
     // Active Nav Link
-    const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll(".nav-link");
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav-link");
 
-    window.addEventListener("scroll", () => {
-      let current = "";
+window.addEventListener("scroll", () => {
+  let current = "";
 
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop - 120;
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 120;
+    const sectionHeight = section.clientHeight;
 
-        if (window.scrollY >= sectionTop) {
-          current = section.getAttribute("id");
-        }
-      });
+    if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+      current = section.getAttribute("id");
+    }
+  });
 
-      navLinks.forEach(link => {
-        link.classList.remove("active");
-
-        if (link.getAttribute("href") === "#" + current) {
-          link.classList.add("active");
-        }
-      });
-    });
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === "#" + current) {
+      link.classList.add("active");
+    }
+  });
+});
 
     // Smooth Scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
