@@ -19,14 +19,6 @@
   <!-- GOOGLE FONT -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    
-    /* Optional: Smooth scrolling highlight active nav link */
-    .nav-link.active {
-      color: #9b30ff;
-      font-weight: 700;
-    }
-  </style>
   </head>
 
 <body>
@@ -78,11 +70,12 @@ We build high-converting funnels, run ROI-focused ads, and automate your growth 
      
       
 <!-- ADD THIS HERE 👇 -->
-<div class="stats">
-  <div><h3>20+</h3><p>Clients</p></div>
-  <div><h3>3X</h3><p>Average ROI</p></div>
-  <div><h3>100%</h3><p>Data Driven</p></div>
-</div>
+<section class="stats-section">
+  <div class="stats">
+    <div><h3>20+</h3><p>Clients</p></div>
+    <div><h3>3X</h3><p>Average ROI</p></div>
+    <div><h3>100%</h3><p>Data Driven</p></div>
+  </div>
 </section>
 
   <!-- ================= SERVICES ================= -->
@@ -407,7 +400,7 @@ window.addEventListener("scroll", () => {
   let current = "";
 
   sections.forEach(section => {
-    const sectionTop = section.offsetTop - 120;
+    const sectionTop = section.offsetTop - 200;
     const sectionHeight = section.clientHeight;
 
     if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
@@ -432,6 +425,14 @@ window.addEventListener("scroll", () => {
           .scrollIntoView({ behavior: "smooth" });
       });
     });
+
+    // Fix for last section (contact)
+window.addEventListener("scroll", () => {
+  if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 50) {
+    navLinks.forEach(link => link.classList.remove("active"));
+    document.querySelector('a[href="#contact"]').classList.add("active");
+  }
+});
 
     // Form to WhatsApp
     document.querySelector(".contact-form").addEventListener("submit", function(e) {
