@@ -530,20 +530,20 @@ nav a:hover::after {
 }
 
 section {
-  margin-bottom: 80px; /* pura section ke niche gap */
+  margin-bottom: 80px;
 }
 
 .grid {
-  gap: 30px; /* cards ke beech gap */
+  gap: 30px;
+  margin-top: 20px;
 }
 
-/* Force Spacing */
 section h2 {
   margin-bottom: 40px;
 }
 
-.grid {
-  margin-top: 20px;
+#about-tendoon h1 {
+  margin-bottom: 50px;
 }
 
 
