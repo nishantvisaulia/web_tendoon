@@ -253,9 +253,16 @@ nav ul {
   box-shadow: 0 20px 40px rgba(0,0,0,0.4);
 }
 
-/* Section Heading ke niche extra space */
-.services h2, .portfolio h2, .about h2 {
-  margin-bottom: 80px; /* Space increase kar diya hai */
+/* Sabhi major sections ke upar aur niche space badhane ke liye */
+.services, .portfolio, .about, #case-study, #contact {
+  padding: 160px 0; /* Space 100px se badha kar 160px kar diya hai */
+}
+
+/* Heading ke upar extra breathing room dene ke liye */
+section h2 {
+  margin-top: 20px;
+  margin-bottom: 80px; /* Heading aur content ke beech ka gap */
+  font-size: 2.8rem;
 }
 
 .service-img img:hover, .about-image img:hover {
@@ -267,9 +274,17 @@ nav ul {
 /* ===== 6. CARDS & GRID (For Testimonials/Pricing) ===== */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr); /* 3 barabar columns banayega */
   gap: 25px;
-  margin-top: 40px;
+  width: 100%;
+  margin-top: 50px;
+}
+
+/* Mobile par ye automatically stack ho jayenge */
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
 }
 
 .grid {
@@ -432,16 +447,23 @@ nav ul {
 
 .sticky-btn {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 10000; /* Sabse upar */
+  bottom: 30px; /* Screen ke niche se gap */
+  right: 30px;  /* Screen ke right se gap */
+  z-index: 9999; /* Isse button hamesha sabse upar rahega */
   background: var(--primary);
   color: white;
-  padding: 15px 30px;
+  padding: 15px 32px;
   border-radius: 50px;
   text-decoration: none;
   font-weight: 700;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  font-size: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Button ko depth dene ke liye */
+  transition: var(--transition);
+}
+
+.sticky-btn:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 15px 35px var(--primary-glow);
 }
 
 /* ===== 11. RESPONSIVE ===== */
