@@ -570,10 +570,11 @@ ul li {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #9b4dff;
+  background: linear-gradient(135deg, #9b4dff, #7b2ff7);
   padding: 12px 18px;
   border-radius: 30px;
   color: #fff;
   text-decoration: none;
   z-index: 1000;
+  box-shadow: 0 0 15px rgba(123, 47, 247, 0.5);
 }
