@@ -217,6 +217,25 @@ section {
   text-align: center;
 }
 
+.service-img img {
+  width: 100%;
+  max-width: 400px;   /* 🔥 control size */
+  height: 250px;      /* 🔥 same height */
+  object-fit: cover;  /* 🔥 image crop clean */
+  border-radius: 15px;
+}
+
+.service-img img,
+.portfolio-item img {
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  transition: 0.4s;
+}
+
+.service-img img:hover,
+.portfolio-item img:hover {
+  transform: scale(1.05);
+}
+
 /* CARD */
 .card {
   background: rgba(255,255,255,0.04);
@@ -256,6 +275,14 @@ section {
   transition: 0.4s;
 }
 
+/* ===== PORTFOLIO ===== */
+.portfolio-item img {
+  width: 100%;
+  height: 250px;     /* 🔥 same height as above */
+  object-fit: cover; /* 🔥 uniform look */
+  border-radius: 15px;
+}
+
 .portfolio-item img:hover {
   transform: scale(1.05);
 }
@@ -274,6 +301,8 @@ section {
 .portfolio-item:hover .portfolio-caption {
   opacity: 1;
 }
+
+
 
 /* ===== ABOUT ===== */
 .about {
