@@ -325,22 +325,57 @@ section h2 {
 
 .sticky-btn:hover { transform: scale(1.05); }
 
-/* ===== 8. BUTTONS & ANIMATIONS ===== */
-.btn, .btn-outline {
-  padding: 10px 25px;
+/* ===== 8. BUTTONS & ANIMATIONS (Updated with Glow Effect) ===== */
+.btn, .btn-outline, .card .btn, .contact-form .btn {
+  padding: 12px 28px;
   border-radius: 50px;
   text-decoration: none;
   font-weight: 600;
   display: inline-block;
-  transition: 0.3s;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* Smooth transition like images */
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid transparent;
 }
 
-.btn { background: var(--primary); color: white; border: none; }
-.btn-outline { border: 1px solid var(--primary); color: var(--primary); }
+/* Primary Button (Fill) */
+.btn {
+  background: var(--primary);
+  color: white;
+}
+
+/* Outline Button */
+.btn-outline {
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  background: transparent;
+}
 
 @keyframes float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-6px); }
+}
+
+/* ===== HOVER STATE (The Glow Effect) ===== */
+.btn:hover, 
+.btn-outline:hover, 
+.card .btn:hover, 
+.contact-form .btn:hover {
+  transform: scale(1.05); /* Images ki tarah zoom */
+  
+  /* White & Purple mixed glow */
+  box-shadow: 0 0 25px 2px rgba(255, 255, 255, 0.2), 
+              0 0 40px 5px rgba(155, 77, 255, 0.6); 
+  
+  border-color: rgba(255, 255, 255, 0.5); /* Border chamkegi */
+  color: white;
+}
+
+/* Pricing aur Contact buttons ke liye special spacing */
+.card .btn, .contact-form .btn {
+  margin-top: 15px;
+  width: 100%; /* Pricing/Contact mein full width acche lagte hain */
 }
 
 /* ===== 9. RESPONSIVE ===== */
