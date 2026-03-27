@@ -347,6 +347,10 @@ nav a:hover::after {
   margin-bottom: 80px; /* space before next section */
 }
 
+#about h1 {
+  text-align: center;
+}
+
 /* ===== ABOUT FLEX LAYOUT ===== */
 .about-content .about-flex {
   display: flex;
@@ -531,4 +535,27 @@ section {
 
 .grid {
   gap: 30px; /* cards ke beech gap */
+}
+
+/* Force Spacing */
+h1 {
+  margin-bottom: 50px !important;
+}
+
+#case-study h1,
+#our-work h1,
+#pricing h1 {
+  margin-bottom: 50px;
+}
+
+.grid {
+  margin-top: 30px;
+}
+
+h1 {
+  border: 2px solid red;
+}
+
+.grid {
+  border: 2px solid blue;
 }
