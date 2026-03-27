@@ -77,8 +77,12 @@ nav ul {
   padding: 5px 0;
 }
 
-.nav-link:hover { opacity: 1; }
+/* Hover par Text white hi rahega */
+.nav-link:hover {
+  opacity: 1;
+}
 
+/* Underline Base Style */
 .nav-link::after {
   content: "";
   position: absolute;
@@ -86,14 +90,27 @@ nav ul {
   left: 0;
   width: 0;
   height: 2px;
-  background: var(--primary);
+  /* DEFAULT HOVER COLOR: WHITE */
+  background: #ffffff; 
   transition: width 0.3s ease;
 }
 
-.nav-link:hover::after, 
-.nav-link.active::after { width: 100%; }
+/* CURSOR LE JANE PAR: Line White aayegi */
+.nav-link:hover::after {
+  width: 100%;
+  background: #ffffff; /* White line on hover */
+}
 
-.nav-link.active { color: var(--primary); opacity: 1; }
+/* SELECT / ACTIVE HONE PAR: Colour Purple ho jayega */
+.nav-link.active {
+  color: var(--primary); /* Text purple */
+  opacity: 1;
+}
+
+.nav-link.active::after {
+  width: 100%;
+  background: var(--primary); /* Line purple only when active */
+}
 
 /* ===== 3. HERO SECTION ===== */
 .hero {
