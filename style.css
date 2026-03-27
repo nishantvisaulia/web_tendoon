@@ -133,12 +133,18 @@ nav ul {
   display: flex;
   gap: 15px;
   justify-content: center;
+  margin-bottom: 50px; /* Trust bar se space badhane ke liye */
 }
 
 /* ===== 4. LAYOUT SECTIONS (Optimized Spacing) ===== */
 /* Padding ko 160px se kam karke 80px kar diya hai (50% reduction) */
 .services, .portfolio, .about, #case-study, #contact {
   padding: 80px 0; 
+}
+
+/* Service aur Case study buttons ke liye */
+.service-text .btn, .service-text .btn-outline {
+  margin-bottom: 30px; 
 }
 
 section h2 {
@@ -165,8 +171,19 @@ section h2 {
   transition: transform 0.5s ease;
 }
 
-.service-img img:hover, .about-image img:hover {
-  transform: scale(1.03);
+.service-img img, .about-image img, .portfolio-item img {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), 
+              box-shadow 0.5s ease;
+}
+
+.service-img img:hover, 
+.about-image img:hover, 
+.portfolio-item:hover img {
+  transform: scale(1.04);
+  /* Purple Glow Shadow */
+  box-shadow: 0 0 30px 5px rgba(155, 77, 255, 0.5), 
+              0 10px 20px rgba(0, 0, 0, 0.6); 
+  border-color: var(--primary);
 }
 
 /* ===== 5. PRICING GRID (Fixed Horizontal) ===== */
