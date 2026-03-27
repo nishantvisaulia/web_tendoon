@@ -93,10 +93,7 @@ nav ul {
 .nav-link:hover::after, 
 .nav-link.active::after { width: 100%; }
 
-.nav-link.active {
-  color: var(--primary);
-  opacity: 1;
-}
+.nav-link.active { color: var(--primary); opacity: 1; }
 
 /* ===== 3. HERO SECTION ===== */
 .hero {
@@ -105,7 +102,7 @@ nav ul {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding-top: 120px;
+  padding-top: 100px;
   background: radial-gradient(circle at top left, rgba(155, 77, 255, 0.08), transparent 30%),
               radial-gradient(circle at bottom right, rgba(123, 47, 247, 0.05), transparent 30%);
 }
@@ -113,157 +110,92 @@ nav ul {
 .hero-logo {
   height: 180px;
   width: auto;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   filter: drop-shadow(0 0 10px rgba(155, 77, 255, 0.2));
-}
-
-.hero-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
 }
 
 .hero h1 {
   font-size: clamp(2.2rem, 6vw, 3.8rem);
   line-height: 1.1;
-  margin: 0 auto 25px;
+  margin: 0 auto 20px;
   font-weight: 700;
   max-width: 900px;
-  text-align: center;
 }
 
 .hero-sub {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: var(--text-muted);
-  max-width: 750px;
-  margin: 0 auto 40px;
-  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 35px;
 }
 
 .hero-buttons {
   display: flex;
-  gap: 20px;
+  gap: 15px;
   justify-content: center;
 }
 
-.trust-bar {
-  margin-top: 60px;
-  font-size: 14px;
-  color: var(--text-muted);
-  opacity: 0.7;
-}
-
-/* ===== 4. BUTTONS ===== */
-.btn, .btn-outline {
-  padding: 12px 28px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: 600;
-  display: inline-block;
-  transition: var(--transition);
-  cursor: pointer;
-}
-
-.btn {
-  background: var(--primary);
-  color: white;
-  border: none;
-}
-
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px var(--primary-glow);
-}
-
-.btn-outline {
-  border: 1px solid var(--primary);
-  color: var(--primary);
-}
-
-.btn-outline:hover {
-  background: var(--primary);
-  color: white;
-}
-
-/* ===== 5. LAYOUT SECTIONS (Spacing & Rows) ===== */
+/* ===== 4. LAYOUT SECTIONS (Optimized Spacing) ===== */
+/* Padding ko 160px se kam karke 80px kar diya hai (50% reduction) */
 .services, .portfolio, .about, #case-study, #contact {
-  padding: 160px 0;
+  padding: 80px 0; 
 }
 
 section h2 {
-  margin-top: 20px;
-  margin-bottom: 60px;
-  font-size: 2.0rem;
+  margin-bottom: 40px;
+  font-size: 2.2rem;
   text-align: center;
 }
 
-.service-row {
+.service-row, .about-flex {
   display: flex;
   align-items: center;
-  gap: 60px;
-  margin-bottom: 80px;
+  gap: 50px;
+  margin-bottom: 60px;
 }
 
 .service-row.reverse { flex-direction: row-reverse; }
 
-.service-text, .service-img { flex: 1; }
-
-.service-text h3 {
-  font-size: 2rem;
-  margin-bottom: 15px;
-  color: var(--primary);
-}
+.service-text, .service-img, .about-text, .about-image { flex: 1; }
 
 .service-img img, .about-image img {
   width: 100%;
   border-radius: 20px;
   border: 1px solid var(--border-glass);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.5s ease;
 }
 
 .service-img img:hover, .about-image img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 15px 30px rgba(155, 77, 247, 0.3);
+  transform: scale(1.03);
 }
 
-/* ===== 6. GRID & CARDS (Unified) ===== */
+/* ===== 5. PRICING GRID (Fixed Horizontal) ===== */
 .grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Force 3 columns */
+  gap: 25px;
   width: 100%;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .card {
   background: var(--glass);
-  padding: 40px 25px;
+  padding: 30px 20px;
   border-radius: 20px;
   border: 1px solid var(--border-glass);
   text-align: center;
   display: flex;
-  flex: 1;
   flex-direction: column;
   justify-content: space-between;
-  min-width: 300px;
-  max-width: 400px;
   transition: var(--transition);
 }
 
 .card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-8px);
   border-color: var(--primary);
-  background: rgba(255, 255, 255, 0.08);
 }
 
-.card h3 {
-  margin-bottom: 15px;
-  color: var(--primary);
-}
+.card h3 { color: var(--primary); margin-bottom: 10px; }
 
 .card ul {
   list-style: none;
@@ -271,155 +203,84 @@ section h2 {
   text-align: left;
 }
 
-.card li {
-  margin-bottom: 10px;
-  color: var(--text-muted);
-  font-size: 15px;
-}
-
 .card li::before {
   content: "✓ ";
   color: var(--primary);
 }
 
-/* ===== 7. PORTFOLIO ===== */
+/* ===== 6. PORTFOLIO & CONTACT ===== */
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
 }
 
 .portfolio-item {
-  position: relative;
-  border-radius: 20px;
+  border-radius: 15px;
   overflow: hidden;
   border: 1px solid var(--border-glass);
   aspect-ratio: 16 / 9;
 }
 
 .portfolio-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.6s ease;
+  width: 100%; height: 100%; object-fit: cover;
+  transition: 0.5s;
 }
 
-.portfolio-item:hover img { transform: scale(1.1); }
-
-.portfolio-caption {
-  padding: 15px;
-  background: rgba(10, 10, 10, 0.9);
-  text-align: center;
-  font-weight: 500;
-}
-
-/* ===== 8. ABOUT & CONTACT ===== */
-.about-flex {
-  display: flex;
-  align-items: center;
-  gap: 50px;
-}
+.portfolio-item:hover img { transform: scale(1.08); }
 
 .contact-form {
   display: grid;
-  gap: 15px;
-  max-width: 600px;
-  margin: 40px auto;
+  gap: 12px;
+  max-width: 550px;
+  margin: 30px auto 0; /* Margin bottom hataya taaki footer ke paas rahe */
 }
 
-.contact-form input, .contact-form textarea {
-  background: var(--glass);
-  border: 1px solid var(--border-glass);
-  padding: 15px;
-  border-radius: 10px;
-  color: white;
-  outline: none;
-  font-family: inherit;
-}
-
-.contact-form input:focus, .contact-form textarea:focus { border-color: var(--primary); }
-
-/* ===== 9. FOOTER ===== */
+/* ===== 7. FOOTER & STICKY BUTTON ===== */
 .footer {
-  padding: 60px 0 40px;
+  padding: 40px 0; /* Space kam kiya */
   text-align: center;
   border-top: 1px solid var(--border-glass);
 }
 
-.social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-bottom: 20px;
-}
-
-.social-icons a {
-  color: white;
-  font-size: 24px;
-  transition: var(--transition);
-}
-
-.social-icons a:hover {
-  color: var(--primary);
-  transform: translateY(-5px);
-}
-
-/* ===== 10. UTILITIES & STICKY BUTTON ===== */
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
-}
-
-.reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: 1s ease;
-}
-
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 .sticky-btn {
   position: fixed;
-  bottom: 30px;
-  right: 30px;
-  z-index: 10000;
+  bottom: 25px; /* Locked position */
+  right: 25px;  /* Right side gap */
+  z-index: 9999;
   background: var(--primary);
   color: white;
-  padding: 15px 32px;
+  padding: 12px 28px;
   border-radius: 50px;
   text-decoration: none;
   font-weight: 700;
-  font-size: 16px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  transition: var(--transition);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  transition: 0.3s;
 }
 
-.sticky-btn:hover {
-  transform: translateY(-5px) scale(1.05);
-  box-shadow: 0 15px 35px var(--primary-glow);
+.sticky-btn:hover { transform: scale(1.05); }
+
+/* ===== 8. BUTTONS & ANIMATIONS ===== */
+.btn, .btn-outline {
+  padding: 10px 25px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  transition: 0.3s;
 }
 
-/* ===== 11. RESPONSIVE ===== */
+.btn { background: var(--primary); color: white; border: none; }
+.btn-outline { border: 1px solid var(--primary); color: var(--primary); }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* ===== 9. RESPONSIVE ===== */
 @media (max-width: 992px) {
-  .service-row, .service-row.reverse, .about-flex {
-    flex-direction: column !important;
-    text-align: center;
-  }
-  
-  .grid {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .card { max-width: 450px; width: 100%; }
-
+  .grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
+  .service-row, .about-flex { flex-direction: column !important; text-align: center; }
   nav ul { display: none; }
-}
-
-@media (max-width: 768px) {
-  .hero-buttons { flex-direction: column; }
-  .section-padding { padding: 60px 0; }
 }
