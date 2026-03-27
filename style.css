@@ -237,10 +237,39 @@ section h2 {
 }
 
 /* ===== 7. FOOTER & STICKY BUTTON ===== */
+
+/* ===== SOCIAL ICONS FIX ===== */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px; /* Icons ke beech ka gap */
+  margin-bottom: 20px;
+}
+
+.social-icons a {
+  color: var(--text-main); /* Default white color */
+  font-size: 28px; /* Size bada kar diya hai */
+  transition: var(--transition);
+  display: inline-block;
+}
+
+.social-icons a:hover {
+  color: var(--primary); /* Hover par purple color */
+  transform: translateY(-5px); /* Halka sa upar move hoga */
+}
+
+/* Footer spacing fix */
 .footer {
-  padding: 40px 0; /* Space kam kiya */
+  padding: 40px 0;
   text-align: center;
   border-top: 1px solid var(--border-glass);
+  margin-top: 20px; /* Form se thoda gap */
+}
+
+.footer p {
+  font-size: 14px;
+  color: var(--text-muted);
+  opacity: 0.8;
 }
 
 .sticky-btn {
