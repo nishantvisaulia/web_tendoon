@@ -546,6 +546,8 @@ section h2 {
   margin-top: 20px;
 }
 
-.grid {
-  border: 2px solid blue;
+#case-study h2,
+#our-work h2,
+#pricing h2 {
+  margin-bottom: 50px;
 }
